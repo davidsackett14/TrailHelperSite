@@ -1,4 +1,4 @@
-
+// setting up hiking trail API - Hayden
   var queryURL = "https://opendata.arcgis.com/datasets/9c21cc1f95ba40468deb36bb6fd94943_0.geojson";
 
   $.ajax({
