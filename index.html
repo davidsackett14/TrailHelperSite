@@ -13,6 +13,9 @@
     <link type="text/css" rel="stylesheet" href="assets/materialize.min.css" media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="assets/materialize.css" media="screen,projection" />
 
+    <!-- Enable Google Maps JavaScript API -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLOEczOI4oBfskeRbhqLy_0nnwsBAe_J8" type="text/javascript"></script>
+
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--external css-->
@@ -100,6 +103,20 @@
             </div>
         </div>
     </div>
+    </div>
+
+    <!-- Adding elements for Google Maps at end of body. We can move this on the page. -->
+    <form>
+        <input type="button" id="watch" value="Watch me">
+        <input type="button" id="clearWatch" value="Clear watch">
+    </form>
+    <div id="location">
+        Your location will go here.
+    </div>
+    <div id="distance">
+        Distance from home will go here.
+    </div>
+    <div id="map">
     </div>
     
    <!--footer section-->

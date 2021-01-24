@@ -1,0 +1,6 @@
+/* Adding style for map element. We can change this to use Materialize. */
+#map {
+  height: 400px;
+  width: 400px;
+  border: 1px solid black;
+}
