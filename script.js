@@ -163,13 +163,15 @@ $(document).ready(function() {
 
 });
 
-var queryURL = "https://opendata.arcgis.com/datasets/9c21cc1f95ba40468deb36bb6fd94943_0.geojson";
-
-$.ajax({
+var queryURL = 'https://developer.nps.gov/api/v1/parks?stateCode=UT&api_key=gv6tmP4JQDOhpB8OVmK9LaoSODwYWgPAVYqlFkJh'
+$.get({
 url: queryURL,
-method: "GET"
+
 })
 .then(function(response){
-  console.log(JSON.stringify(response) + "worked");
+ console.log(response);
   
-});
+})
+.catch(function(error){
+    console.error(error)
+})
