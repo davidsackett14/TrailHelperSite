@@ -1,5 +1,17 @@
 $(document).ready(function() {
-
+  var queryURL = 'https://developer.nps.gov/api/v1/parks?stateCode=UT&api_key=gv6tmP4JQDOhpB8OVmK9LaoSODwYWgPAVYqlFkJh'
+  $.get({
+  url: queryURL,
+  
+  })
+  .then(function(response){
+   console.log(response);
+    
+  })
+  .catch(function(error){
+      console.error(error)
+  })
+  
   // Code for Google Maps. We can delete the irrelevant functionality after we decide how we want to use the map.
   var ourCoords = {
     latitude: 40.625766,
