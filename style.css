@@ -4,3 +4,10 @@
   width: 400px;
   border: 1px solid black;
 }
+#stateSelect {
+  margin: 5px, 5px, 5px, 5px;
+}
+.flexChex{
+  display: inline-grid;
+ 
+}

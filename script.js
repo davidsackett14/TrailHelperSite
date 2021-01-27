@@ -175,15 +175,5 @@ $(document).ready(function() {
 
 });
 
-var queryURL = 'https://developer.nps.gov/api/v1/parks?stateCode=UT&api_key=gv6tmP4JQDOhpB8OVmK9LaoSODwYWgPAVYqlFkJh'
-$.get({
-url: queryURL,
 
-})
-.then(function(response){
- console.log(response);
-  
-})
-.catch(function(error){
-    console.error(error)
-})
+a
