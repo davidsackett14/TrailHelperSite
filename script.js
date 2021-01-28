@@ -1,17 +1,43 @@
 $(document).ready(function() {
   var queryURL = 'https://developer.nps.gov/api/v1/parks?stateCode=UT&api_key=gv6tmP4JQDOhpB8OVmK9LaoSODwYWgPAVYqlFkJh'
+  var array = []
   $.get({
   url: queryURL,
   
   })
   .then(function(response){
-   console.log(response);
     
-  })
-  .catch(function(error){
-      console.error(error)
+   console.log(response);
+   var arraylength = parseInt(response.data.length);
+   for(var i=0; i<arraylength; i++){
+   
+    var coordinate = response.data[i].latLong;
+   
+    array.push(coordinate)
+    
+   }
+
+console.log(array)
+   
+   
+   
   })
   
+  .catch(function(error){
+      console.error(error)
+  })})
+  //code for state select button
+   document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('#stateselectiion');
+    var stateselections = document.getElementsByClassName("browser-default");
+    console.log(stateselections);})
+  
+    $(document).ready(function(){
+      $('select').formSelect();
+    });
+    
+  
+  // instance.getSelectedValues(stateselection);
   // Code for Google Maps. We can delete the irrelevant functionality after we decide how we want to use the map.
   var ourCoords = {
     latitude: 40.625766,
@@ -172,8 +198,23 @@ $(document).ready(function() {
   
     addMarker(map, latlong, "Your new location", "You moved to: " + latitude + ", " + longitude);
   }
+ document.getElementById("run-search").addEventListener("click", function(){
+  var statesel = document.getElementById('stateselection');
+  var activitysel = document.getElementsByClassName('activity');
+  
+  for(var i=0; i<activitysel.length; i++)
+{
+  if(activitysel[i].checked){
+    console.log(activitysel[i].value)
+    
+  }
+}
+  console.log(statesel.value);
+  
+  console.log(activitysel)
+  console.log(activitysel.value)
+  console.log(activitysel.checked)
+ })
 
-});
+  
 
-
-a

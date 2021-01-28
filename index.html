@@ -44,98 +44,103 @@
                     <div class="text-row">
                         search for nearby trails
                         <div class="input-field col s12 z-depth-3">
-                            
+
                             <textarea id="textarea1" class="materialize-textarea"></textarea>
                             <!-- removed text from label area and included it in text area line above-prevents letters sitting on top of each other -->
                             <label for="textarea1">Zip Code </label>
-                            <form  action="#">
+                            <form action="#">
+                               
                                 <p class="flexChex">
-                                    <label >
-                                        <input type="checkbox" />
-                                        <span>Auto and ATV accessible</span>
-                                    </label>
-                                    <label >
-                                        <input type="checkbox" />
+                                    <label for="test">
+                                        <input class="activity" type="checkbox"  value="auto" id="test"/>
+                                        <span class="darkerLetter">Auto and ATV accessible</span>
+                                    </label >
+                                    <label>
+                                        <input class="activity" type="checkbox" />
                                         <span>Scenic Driving</span>
                                     </label>
-                                    <label >
-                                        <input type="checkbox" />
-                                        <span>Astronomy</span>
+                                    <label>
+                                        <input class="activity" type="checkbox" />
+                                        <span class="darkerLetter">Astronomy</span>
                                     </label>
                                 </p>
                                 <p class="flexChex">
-                                    <label >
-                                        <input type="checkbox" />
-                                        <span>Canoe or Kayak Camping</span>
-                                    </label>
-                                
                                     <label>
-                                        <input type="checkbox" />
-                                        <span>Camping</span>
+                                        <input class="activity" value= "CANOE" type="checkbox" />
+                                        <span>Canoe or Kayak </span>
+                                    </label>
+
+                                    <label>
+                                        <input class="activity" type="checkbox" />
+                                        <span class="darkerLetter">Camping</span>
                                     </label>
                                     <label>
-                                        <input type="checkbox" />
+                                        <input class="activity" type="checkbox" />
                                         <span>Back Country Camping</span>
                                     </label>
                                 </p>
                                 <p class="flexChex">
-                                    <label >
-                                        <input type="checkbox" />
-                                        <span>Car or Front Country Camping</span>
-                                    </label>
-                                
                                     <label>
-                                        <input type="checkbox" />
+                                        <input class="activity" type="checkbox" />
+                                        <span class="darkerLetter">Car or Front Country Camping</span>
+                                    </label>
+
+                                    <label>
+                                        <input class="activity" type="checkbox" />
                                         <span>Canyoneering</span>
                                     </label>
                                     <label>
-                                        <input type="checkbox" />
-                                        <span>Guided Tours</span>
+                                        <input class="activity" type="checkbox" />
+                                        <span class="darkerLetter">Guided Tours</span>
                                     </label>
                                 </p>
                                 <p class="flexChex">
-                                    <label >
-                                        <input type="checkbox" />
+                                    <label>
+                                        <input class="activity" type="checkbox" id="hiking" />
                                         <span>Hiking</span>
                                     </label>
-                                
+
                                     <label>
-                                        <input type="checkbox" />
-                                        <span>Horseback Riding</span>
+                                        <input class="activity" type="checkbox" />
+                                        <span class="darkerLetter">Horseback Riding</span>
                                     </label>
                                     <label>
-                                        <input type="checkbox" />
+                                        <input class="activity" type="checkbox" />
                                         <span>Junior Ranger Program</span>
                                     </label>
                                 </p>
-                                <!-- <label for="textarea1">zip code</label> -->
+                            
+                                <!-- <label id= "checkboox" for="checkbox"></label> 
 
-                                <!-- <select class="browser-default">
+
+                                 <select id="stateselection"  multiple>
                                     <option value="" disabled selected>Pick ammenity or activity</option>
                                     <option value="1">Auto and ATV accessible</option>
                                     <option value="2">Scenic Driving</option>
                                     <option value="3">Astronomy</option>
-                                    <option value="1">Canoe or Kayak Camping</option>
-                                    <option value="2">Camping</option>
-                                    <option value="3">Back Country Camping</option>
-                                    <option value="1">Car or Front Country Camping"</option>
-                                    <option value="2">Canyoneering</option>
-                                    <option value="3">Rock Climbing</option>
-                                    <option value="1">Guided Tours</option>
-                                    <option value="1">Hiking</option>
-                                    <option value="2">Horseback Riding</option>
-                                    <option value="3">Junior Ranger Program</option>
-                                    <option value="2">Shopping</option>
-                                    <option value="3">Bookstore and Park Store</option>
-                                    <option value="2">Snowsheing</option>
-                                    <option value="3">Skiing</option>
-                                    <option value="2">Fishing</option>
-                                    <option value="3">Option 19</option>
+                                    <option value="4">Canoe or Kayak Camping</option>
+                                    <option value="5">Camping</option>
+                                    <option value="6">Back Country Camping</option>
+                                    <option value="7">Car or Front Country Camping"</option>
+                                    <option value="8">Canyoneering</option>
+                                    <option value="9">Rock Climbing</option>
+                                    <option value="10">Guided Tours</option>
+                                    <option value="11">Hiking</option>
+                                    <option value="12">Horseback Riding</option>
+                                    <option value="13">Junior Ranger Program</option>
+                                    <option value="14">Shopping</option>
+                                    <option value="15">Bookstore and Park Store</option>
+                                    <option value="16">Snowsheing</option>
+                                    <option value="17">Skiing</option>
+                                    <option value="18">Fishing</option>
+                                    <option value="19">Option 19</option> 
                                 </select> -->
-                                <!-- <label id="stateSelect">Browser Select</label> -->
-                                <select class="browser-default">
+
+
+                                <label id="stateSelect" ></label>
+                                <select id="stateselection" class="browser-default"  >
                                     <option value="" disabled selected>Pick A State</option>
-                                    <option value="1">AL</option>
+                                    <option value="AL">AL</option>
                                     <option value="2">AK</option>
                                     <option value="3">AZ</option>
                                     <option value="4">AR</option>
@@ -185,7 +190,7 @@
                                     <option value="48">WV</option>
                                     <option value="49">WI</option>
                                     <option value="50">WY</option>
-                                   
+
 
 
                                 </select>
@@ -194,7 +199,7 @@
                         </div>
                     </div>
                     <button type="submit" class="btn btn-default" id="run-search">
-                        <i class="small material-icons">search</i>Search</button>
+                        <i class="small material-icons"></i>Search</button>
                 </form>
             </div>
 
