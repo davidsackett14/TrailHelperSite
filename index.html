@@ -44,148 +44,153 @@
                     <div class="text-row">
                         search for nearby trails
                         <div class="input-field col s12 z-depth-3">
-                            
+
                             <textarea id="textarea1" class="materialize-textarea"></textarea>
                             <!-- removed text from label area and included it in text area line above-prevents letters sitting on top of each other -->
                             <label for="textarea1">Zip Code </label>
-                            <form  action="#">
+                            <form action="#">
+                               
                                 <p class="flexChex">
-                                    <label >
-                                        <input type="checkbox" />
-                                        <span>Auto and ATV accessible</span>
-                                    </label>
-                                    <label >
-                                        <input type="checkbox" />
+                                    <label for="test">
+                                        <input value="Auto and ATV accessible" class="activity" type="checkbox"  value="auto" id="test"/>
+                                        <span class="darkerLetter">Auto and ATV accessible</span>
+                                    </label >
+                                    <label>
+                                        <input value="Scenic Driving" class="activity" type="checkbox" />
                                         <span>Scenic Driving</span>
                                     </label>
-                                    <label >
-                                        <input type="checkbox" />
-                                        <span>Astronomy</span>
+                                    <label>
+                                        <input value="Astronomy" class="activity" type="checkbox" />
+                                        <span class="darkerLetter">Astronomy</span>
                                     </label>
                                 </p>
                                 <p class="flexChex">
-                                    <label >
-                                        <input type="checkbox" />
-                                        <span>Canoe or Kayak Camping</span>
-                                    </label>
-                                
                                     <label>
-                                        <input type="checkbox" />
-                                        <span>Camping</span>
+                                        <input value="Canoe or Kayak" class="activity" value= "Canoe or Kayak" type="checkbox" />
+                                        <span>Canoe or Kayak </span>
+                                    </label>
+
+                                    <label>
+                                        <input value="Camping" class="activity" type="checkbox" />
+                                        <span class="darkerLetter">Camping</span>
                                     </label>
                                     <label>
-                                        <input type="checkbox" />
+                                        <input value="Back Country Camping" class="activity" type="checkbox" />
                                         <span>Back Country Camping</span>
                                     </label>
                                 </p>
                                 <p class="flexChex">
-                                    <label >
-                                        <input type="checkbox" />
-                                        <span>Car or Front Country Camping</span>
-                                    </label>
-                                
                                     <label>
-                                        <input type="checkbox" />
+                                        <input value="Car or Front Country Camping" class="activity" type="checkbox" />
+                                        <span class="darkerLetter">Car or Front Country Camping</span>
+                                    </label>
+
+                                    <label>
+                                        <input value="Canyoneering" class="activity" type="checkbox" />
                                         <span>Canyoneering</span>
                                     </label>
                                     <label>
-                                        <input type="checkbox" />
-                                        <span>Guided Tours</span>
+                                        <input value="Guided Tours" class="activity" type="checkbox" />
+                                        <span class="darkerLetter">Guided Tours</span>
                                     </label>
                                 </p>
                                 <p class="flexChex">
-                                    <label >
-                                        <input type="checkbox" />
+                                    <label>
+                                        <input value="Hiking"  class="activity" type="checkbox" id="hiking" />
                                         <span>Hiking</span>
                                     </label>
-                                
+
                                     <label>
-                                        <input type="checkbox" />
-                                        <span>Horseback Riding</span>
+                                        <input value="Horseback Riding" class="activity" type="checkbox" />
+                                        <span class="darkerLetter">Horseback Riding</span>
                                     </label>
                                     <label>
-                                        <input type="checkbox" />
+                                        <input value="Junior Ranger Program" class="activity" type="checkbox" />
                                         <span>Junior Ranger Program</span>
                                     </label>
                                 </p>
-                                <!-- <label for="textarea1">zip code</label> -->
+                            
+                                <!-- <label id= "checkboox" for="checkbox"></label> 
 
-                                <!-- <select class="browser-default">
+
+                                 <select id="stateselection"  multiple>
                                     <option value="" disabled selected>Pick ammenity or activity</option>
                                     <option value="1">Auto and ATV accessible</option>
                                     <option value="2">Scenic Driving</option>
                                     <option value="3">Astronomy</option>
-                                    <option value="1">Canoe or Kayak Camping</option>
-                                    <option value="2">Camping</option>
-                                    <option value="3">Back Country Camping</option>
-                                    <option value="1">Car or Front Country Camping"</option>
-                                    <option value="2">Canyoneering</option>
-                                    <option value="3">Rock Climbing</option>
-                                    <option value="1">Guided Tours</option>
-                                    <option value="1">Hiking</option>
-                                    <option value="2">Horseback Riding</option>
-                                    <option value="3">Junior Ranger Program</option>
-                                    <option value="2">Shopping</option>
-                                    <option value="3">Bookstore and Park Store</option>
-                                    <option value="2">Snowsheing</option>
-                                    <option value="3">Skiing</option>
-                                    <option value="2">Fishing</option>
-                                    <option value="3">Option 19</option>
+                                    <option value="4">Canoe or Kayak Camping</option>
+                                    <option value="5">Camping</option>
+                                    <option value="6">Back Country Camping</option>
+                                    <option value="7">Car or Front Country Camping"</option>
+                                    <option value="8">Canyoneering</option>
+                                    <option value="9">Rock Climbing</option>
+                                    <option value="10">Guided Tours</option>
+                                    <option value="11">Hiking</option>
+                                    <option value="12">Horseback Riding</option>
+                                    <option value="13">Junior Ranger Program</option>
+                                    <option value="14">Shopping</option>
+                                    <option value="15">Bookstore and Park Store</option>
+                                    <option value="16">Snowsheing</option>
+                                    <option value="17">Skiing</option>
+                                    <option value="18">Fishing</option>
+                                    <option value="19">Option 19</option> 
                                 </select> -->
-                                <!-- <label id="stateSelect">Browser Select</label> -->
-                                <select class="browser-default" id="stateselection">
+
+
+                                <label id="stateSelect" ></label>
+                                <select id="stateselection" class="browser-default"  >
                                     <option value="" disabled selected>Pick A State</option>
                                     <option value="AL">Alabama</option>
-                                    <option value="2">AK</option>
-                                    <option value="3">AZ</option>
-                                    <option value="4">AR</option>
-                                    <option value="5">CA</option>
-                                    <option value="6">CO</option>
-                                    <option value="7">CT</option>
-                                    <option value="8">DE</option>
-                                    <option value="9">FL</option>
-                                    <option value="10">GA</option>
-                                    <option value="11">HI</option>
-                                    <option value="12">ID</option>
-                                    <option value="13">IL</option>
-                                    <option value="14">IN</option>
-                                    <option value="15">IA</option>
-                                    <option value="16">KS</option>
-                                    <option value="17">KY</option>
-                                    <option value="18">LA</option>
-                                    <option value="19">ME</option>
-                                    <option value="20">MD</option>
-                                    <option value="21">MA</option>
-                                    <option value="22">MI</option>
-                                    <option value="22">MN</option>
-                                    <option value="24">MS</option>
-                                    <option value="25">MO</option>
-                                    <option value="26">MT</option>
-                                    <option value="27">NE</option>
-                                    <option value="28">NV</option>
-                                    <option value="29">NH</option>
-                                    <option value="30">NJ</option>
-                                    <option value="31">NM</option>
-                                    <option value="32">NY</option>
-                                    <option value="33">NC</option>
-                                    <option value="34">ND</option>
-                                    <option value="35">OH</option>
-                                    <option value="36">OK</option>
-                                    <option value="37">OR</option>
-                                    <option value="38">PA</option>
-                                    <option value="39">RI</option>
-                                    <option value="40">SC</option>
-                                    <option value="41">SD</option>
-                                    <option value="42">TN</option>
-                                    <option value="43">TX</option>
-                                    <option value="44">UT</option>
-                                    <option value="45">VT</option>
-                                    <option value="46">VA</option>
-                                    <option value="47">WA</option>
-                                    <option value="48">WV</option>
-                                    <option value="49">WI</option>
-                                    <option value="50">WY</option>
-                                   
+                                    <option value="AK">Alaska</option>
+                                    <option value="AZ">Arizona</option>
+                                    <option value="AR">Arkansas</option>
+                                    <option value="CA">California</option>
+                                    <option value="CO">Colorada</option>
+                                    <option value="CT">Connecticut</option>
+                                    <option value="DE">Delaware</option>
+                                    <option value="FL">Florida</option>
+                                    <option value="GA">Georgia</option>
+                                    <option value="HI">Hawaii</option>
+                                    <option value="ID">Idaho</option>
+                                    <option value="IL">Illinois</option>
+                                    <option value="IN">Indiana</option>
+                                    <option value="IA">Idaho</option>
+                                    <option value="KS">Kansas</option>
+                                    <option value="KY">Kentucky</option>
+                                    <option value="LA">Lousiana</option>
+                                    <option value="ME">Maine</option>
+                                    <option value="MD">Maryland</option>
+                                    <option value="MA">Massachusetts</option>
+                                    <option value="MI">Michigan</option>
+                                    <option value="MN">Minnesota</option>
+                                    <option value="MS">Mississippi</option>
+                                    <option value="MO">Missouri</option>
+                                    <option value="MT">Montana</option>
+                                    <option value="NE">Nebraska</option>
+                                    <option value="NV">Nevada</option>
+                                    <option value="NH">New Hampshire</option>
+                                    <option value="NJ">New Jersey</option>
+                                    <option value="NM">New Mexico</option>
+                                    <option value="NY">Ney York</option>
+                                    <option value="NC">North Carolina</option>
+                                    <option value="ND">North Dakota</option>
+                                    <option value="OH">Ohio</option>
+                                    <option value="OK">Oklahoma</option>
+                                    <option value="OR">Oregon</option>
+                                    <option value="PA">Pennsylvania</option>
+                                    <option value="RI">Rhode Island</option>
+                                    <option value="SC">South Carolina</option>
+                                    <option value="SD">South Dakota</option>
+                                    <option value="TN">Tennessee</option>
+                                    <option value="TX">Texas</option>
+                                    <option value="UT">Utah</option>
+                                    <option value="VT">Vermont</option>
+                                    <option value="VA">Virginia</option>
+                                    <option value="WA">Washington</option>
+                                    <option value="WV">West Virginia</option>
+                                    <option value="WI">Wisconsin</option>
+                                    <option value="WY">Wyoming</option>
+
 
 
                                 </select>
@@ -194,7 +199,7 @@
                         </div>
                     </div>
                     <button type="submit" class="btn btn-default" id="run-search">
-                        <i class="small material-icons">search</i>Search</button>
+                        <i class="small material-icons"></i>Search</button>
                 </form>
             </div>
 
