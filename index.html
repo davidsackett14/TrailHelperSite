@@ -41,17 +41,20 @@
                 <form class="col s6">
                     <div class="text-row">
                         search for nearby trails
-                        <div class="input-field col s12 z-depth-3">
+                        <div class='widthSize' class="input-field col s12 z-depth-3">
 
                             <textarea id="textarea1" class="materialize-textarea"></textarea>
                             <!-- removed text from label area and included it in text area line above-prevents letters sitting on top of each other -->
                             <label for="textarea1">Zip Code </label>
                             <form action="#">
 
-                                <p class="flexChex">
-                                    <label for="test">
-                                        <input value="Auto and ATV accessible" class="activity" type="checkbox"
-                                            value="auto" id="test" />
+
+                              
+
+                                <!-- <p class="flexChex">
+                                    <label>
+                                        <input value="Auto and ATV accessible" class="activity" type="checkbox"  value="auto" id="test"/>
+
                                         <span class="darkerLetter">Auto and ATV accessible</span>
                                     </label>
                                     <label>
@@ -108,7 +111,45 @@
                                         <input value="Junior Ranger Program" class="activity" type="checkbox" />
                                         <span>Junior Ranger Program</span>
                                     </label>
-                                </p>
+
+                                
+
+                                </p> -->
+
+                                <label id="checkboox" for="checkbox"></label>
+
+
+                                <select id="stateselection" multiple>
+                                    <option value="" disabled selected>Pick ammenities and activities</option>
+                                    <option value="Auto and ATV accessible">Auto and ATV accessible</option>
+                                    <option value="Scenic Driving">Scenic Driving</option>
+                                    <option value="Astronomy">Astronomy</option>
+                                    <option value="Biking">Biking</option>
+                                    <option value="Bird Watching">Bird Watching</option>
+                                    <option value="Road Biking">Road Biking</option>
+                                    <option value="Canoe or Kayak Camping">Canoe or Kayak Camping</option>
+                                    <option value="Camping">Camping</option>
+                                    <option value="Back Country Camping">Back Country Camping</option>
+                                    <option value="Car or Front Country Camping">Car or Front Country Camping"</option>
+                                    <option value="RV Camping">RV Camping</option>
+                                    <option value="Canyoneering">Canyoneering</option>
+                                    <option value="Rock Climbing">Rock Climbing</option>
+                                    <option value="Dining">Dining</option>
+                                    <option value="Fishing">Fishing</option>
+                                    <option value="Guided Tours">Guided Tours</option>
+                                    <option value="Bus/Shuttle Guided Tour">Bus/Shuttle Guided Tour</option>
+                                    <option value="Hiking">Hiking</option>
+                                    <option value="Horseback Riding">Horseback Riding</option>
+                                    <option value="Junior Ranger Program">Junior Ranger Program</option>
+                                    <option value="Shopping">Shopping</option>
+                                    <option value="Bookstore and Park Store">Bookstore and Park Store</option>
+                                    <option value="Snowshoeing">Snowshoeing</option>
+                                    <option value="Skiing">Skiing</option>
+                                    
+                                    
+                                </select>
+
+
 
                                 <label id="stateSelect"></label>
                                 <select id="stateselection" class="browser-default">
