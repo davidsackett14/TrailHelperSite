@@ -3,6 +3,9 @@ $(document).ready(function () {
   var apiKey = 'gv6tmP4JQDOhpB8OVmK9LaoSODwYWgPAVYqlFkJh';
   var array = [];
 
+  // initialize the Materialize select element
+  $('select').formSelect();
+
   // code for state select button 
   document.getElementById('run-search').addEventListener('click', function () {
     var statesel = document.getElementById('stateselection');
