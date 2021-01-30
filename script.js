@@ -82,11 +82,34 @@ $(document).ready(function () {
        // Append and park url to the list item
        parkListItem.append("<a href='" + eachPark.url + "'>" + eachPark.url + "</a>");
        console.log(eachPark.url);
- 
+
+      //  Add map button to card
+      var mapBtn = $('<a>');
+      mapBtn.addClass('waves-effect waves-light btn mapBtn')
+      mapBtn.attr('data-index', a);
+      mapBtn.text('MAP');
+      mapBtn.on('click', function (event) {
+        event.preventDefault();
+        var index = $(this).attr('data-index');
+        console.log("Park name: " + response.data[index].name);
+        getLatLong(index);
+      });
+      parkListItem.append('<br>');
+      parkListItem.append(mapBtn);
+
        // Append the list item to the unordered list
        parkList.append(parkListItem);
      }
- 
+
+      function getLatLong(index) {
+        var latitude = response.data[index].latitude;
+        var longitude = response.data[index].longitude;
+        var latLong = response.data[index].latLong;
+        console.log("Latitude: " + latitude);
+        console.log("Longitude: " + longitude);
+        console.log("LatLong: " + latLong);
+      }
+
       var arraylength = parseInt(response.data.length);
       for (var i = 0; i < arraylength; i++) {
         var coordinate = response.data[i].latLong;
