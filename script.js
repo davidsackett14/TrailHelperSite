@@ -52,17 +52,22 @@ $(document).ready(function () {
          console.log(parkName);
          parkListItem.append("<h4>" + parkName + "</h4>");
        }
- 
+       var imageUrl = eachPark.images[0].url;
+
+       if (imageUrl) {
+        var image = $("<img>").attr("src", imageUrl);
+         parkListItem.append(image);
+       }
        // Converting the arrays in addresses data into strings and storing them in a variable
-       var addresses = JSON.stringify(eachPark.addresses[0].line1);
-       var addressesCity = JSON.stringify(eachPark.addresses[0].city);
-       var addressesState = JSON.stringify(eachPark.addresses[0].stateCode);
+       var addresses = eachPark.addresses[0].line1;
+       var addressesCity = eachPark.addresses[0].city;
+       var addressesState = eachPark.addresses[0].stateCode;
        console.log(addresses, addressesCity, addressesState)
  
        // If the park data contains an address, city, & state, append it to the list item
        if (addresses && addressesCity && addressesState) {
          console.log(addresses, addressesCity, addressesState);
-         parkListItem.append(addresses + ", " + addressesCity + ", " + addressesState);
+         parkListItem.append("<br>" + addresses, "<br>", addressesCity + ", " + addressesState);
        }
  
        // Creating variable to store park description
