@@ -8,6 +8,7 @@ $(document).ready(function () {
 
   // code for state select button 
   document.getElementById('run-search').addEventListener('click', function () {
+    $("#parkinfo").empty();
     var statesel = document.getElementById('stateselection');
     var activitysel = document.getElementsByClassName('activity');
 
@@ -24,6 +25,63 @@ $(document).ready(function () {
       url: queryURL,
     }).then(function (response) {
       console.log(response);
+       // Storing data into a variable
+       var parkData = response.data;
+
+       // Loop through each data response
+       for (var a = 0; a < parkData.length; a++) {
+         
+       // Get info for current index
+       var eachPark = parkData[a];
+ 
+       // Create a list group and class name for each data 
+       var parkList = $("<ul class='collection with-header'>");
+       parkList.addClass("list-group");
+ 
+       // Add the list to the div
+       $("#parkinfo").append(parkList);
+ 
+       // Storing each returned park data name in a variable
+       var parkName = eachPark.name;
+       //Creating a line item with a class name and storing it in a variable
+       var parkListItem = $("<li class='list-group-item parkName'>");
+       
+       // If the park data contains a name, create a line item and append to it
+       if (parkName) {
+       
+         console.log(parkName);
+         parkListItem.append("<h4>" + parkName + "</h4>");
+       }
+ 
+       // Converting the arrays in addresses data into strings and storing them in a variable
+       var addresses = JSON.stringify(eachPark.addresses[0].line1);
+       var addressesCity = JSON.stringify(eachPark.addresses[0].city);
+       var addressesState = JSON.stringify(eachPark.addresses[0].stateCode);
+       console.log(addresses, addressesCity, addressesState)
+ 
+       // If the park data contains an address, city, & state, append it to the list item
+       if (addresses && addressesCity && addressesState) {
+         console.log(addresses, addressesCity, addressesState);
+         parkListItem.append(addresses + ", " + addressesCity + ", " + addressesState);
+       }
+ 
+       // Creating variable to store park description
+       var parkDescription = eachPark.description;
+       console.log(parkDescription);
+ 
+       // If the park data contains description info append it to the list item
+       if (parkDescription) {
+         parkListItem.append("<p>" + parkDescription + "</p>");
+       }
+ 
+       // Append and park url to the list item
+       parkListItem.append("<a href='" + eachPark.url + "'>" + eachPark.url + "</a>");
+       console.log(eachPark.url);
+ 
+       // Append the list item to the unordered list
+       parkList.append(parkListItem);
+     }
+ 
       var arraylength = parseInt(response.data.length);
       for (var i = 0; i < arraylength; i++) {
         var coordinate = response.data[i].latLong;
