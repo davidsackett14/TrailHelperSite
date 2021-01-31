@@ -12,10 +12,11 @@ View the code in your favorite text editor. We suggest VS Code.
 ## Usage
 <!-- write stuff here -->
 
+![mock-up](assets/screenshot.png)
 ## Credits
 The following resources were used in this project:
 
-- [Materialize]()
-- [Google Fonts]()
+- [Materialize](https://materializecss.com/)
+- [National Park Service API](https://www.nps.gov/subjects/developer/index.htm)
 - [Google Maps](https://developers.google.com/maps/)
 - [jQuery](https://jquery.com/)

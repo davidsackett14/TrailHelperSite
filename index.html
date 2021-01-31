@@ -13,9 +13,8 @@
     <link type="text/css" rel="stylesheet" href="assets/materialize.min.css" media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="assets/materialize.css" media="screen,projection" />
 
-    <!-- Enable Google Maps JavaScript API -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLOEczOI4oBfskeRbhqLy_0nnwsBAe_J8"
-        type="text/javascript"></script>
+    <!-- Synchronously loading the Google Maps JavaScript API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLOEczOI4oBfskeRbhqLy_0nnwsBAe_J8"></script>
 
     <!--external css-->
     <link rel="stylesheet" href="style.css">
@@ -30,9 +29,9 @@
                 <img src="https://www.planetware.com/photos-large/USUT/utah-grand-staircase-escalante-national-monument-best-hikes-in-utah-calf-creek.jpg"
                     class="z-depth-5" width="950" height="350">
             </div>
-            <p class="p1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem inventore voluptates, deserunt
+            <!-- <p class="p1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem inventore voluptates, deserunt
                 voluptatibus ut saepe minus provident fugiat iusto debitis accusamus accusantium et omnis dicta! Cumque
-                neque consequatur ratione pariatur!</p>
+                neque consequatur ratione pariatur!</p> -->
         </div>
 
         <!--search field-->
@@ -40,12 +39,12 @@
             <div class="col s6">
                 <form class="col s6">
                     <div class="text-row">
-                        search for nearby trails
+                        Search for nearby trails
                         <div class='widthSize' class="input-field col s12 z-depth-3">
 
-                            <textarea id="textarea1" class="materialize-textarea"></textarea>
+                            <!-- <textarea id="textarea1" class="materialize-textarea"></textarea> -->
                             <!-- removed text from label area and included it in text area line above-prevents letters sitting on top of each other -->
-                            <label for="textarea1">Zip Code </label>
+                            <!-- <label for="textarea1">Zip Code </label> -->
                             <form action="#">
 
 
@@ -120,7 +119,7 @@
 
 
                                 <select id="activityselection" multiple>
-                                    <option value="" disabled selected>Pick ammenities and activities</option>
+                                    <option value="" disabled selected>Pick amenities and activities</option>
                                     <option value="Auto and ATV accessible">Auto and ATV accessible</option>
                                     <option value="Scenic Driving">Scenic Driving</option>
                                     <option value="Astronomy">Astronomy</option>
@@ -153,7 +152,7 @@
 
                                 <label id="stateSelect"></label>
                                 <select id="stateselection">
-                                    <option value="" disabled selected>Pick A State</option>
+                                    <option value="" disabled selected>Pick a state</option>
                                     <option value="AL">Alabama</option>
                                     <option value="AK">Alaska</option>
                                     <option value="AZ">Arizona</option>
@@ -214,13 +213,7 @@
             </div>
 
             <!--Google Map section-->
-            <div class="col s6">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem impedit assumenda aliquam quos
-                    voluptatem praesentium, ullam ducimus ab ipsum consequuntur doloremque ut fugit ea, pariatur
-                    veritatis laborum ad beatae et! (one-half) Lorem ipsum dolor sit amet, consectetur adipisicing
-                    elit. Similique dolor unde repellat odit, optio perferendis provident quo fugiat repellendus
-                    dolorem, excepturi corrupti atque quas saepe expedita tenetur distinctio eligendi a.</p>
-            </div>
+            <div class="col s6" id="map"></div>
         </div>
 
         <!--Cards section-->
@@ -233,20 +226,6 @@
            
         </div>
     </div>
-    </div>
-
-    <!-- Adding elements for Google Maps at end of body. We can move this on the page. -->
-    <form>
-        <input type="button" id="watch" value="Watch me">
-        <input type="button" id="clearWatch" value="Clear watch">
-    </form>
-    <div id="location">
-        Your location will go here.
-    </div>
-    <div id="distance">
-        Distance from home will go here.
-    </div>
-    <div id="map">
     </div>
 
     <!--footer section-->
