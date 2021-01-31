@@ -1,7 +1,6 @@
-/* Adding style for map element. We can change this to use Materialize. */
+/* Always set the map height explicitly to define the size of the div element that contains the map. */
 #map {
   height: 400px;
-  width: 400px;
   border: 1px solid black;
 }
 #stateSelect {
