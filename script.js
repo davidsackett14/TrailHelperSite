@@ -107,7 +107,7 @@ $(document).ready(function () {
        }
  
        // Append and park url to the list item
-       parkListItem.append("<a href='" + eachPark.url + "'>" + eachPark.url + "</a>");
+       parkListItem.append("<a href='" + eachPark.url + "'>" + eachPark.url + "</a>", "<br>");
        console.log(eachPark.url);
 
       //  Add map button to card
