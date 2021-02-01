@@ -2,22 +2,50 @@ $(document).ready(function () {
 
   var apiKey = 'gv6tmP4JQDOhpB8OVmK9LaoSODwYWgPAVYqlFkJh';
 
-  // initialize the Materialize select element
+  // Initialize the Materialize select element
   $('select').formSelect();
 
-  // code for state select button 
-  document.getElementById('run-search').addEventListener('click', function () {
-    $("#parkinfo").empty();
-    var statesel = document.getElementById('stateselection');
-    var activitysel = document.getElementsByClassName('activity');
+  // Get last search from local storage and call displayParks
+  var lastState = localStorage.getItem('lastState');
+  console.log("lastState: " + lastState);
 
-    for (var i = 0; i < activitysel.length; i++) {
-      if (activitysel[i].checked) {
-        console.log(activitysel[i].value)
-      }
-    }
+  var lastCoordStr = localStorage.getItem('lastCoord');
+  console.log("lastCoord: " + lastCoordStr);
+  var lastCoordObj = JSON.parse(lastCoordStr);
+
+  if (lastState !== "") {
+    displayParks(lastState);
+  }
+  if (lastCoordObj !== null) {
+    displayLastMap(lastCoordObj);
+  }
+
+  // code for state select button 
+  document.getElementById('run-search').addEventListener('click', function (event) {
+    event.preventDefault();
+
+    var statesel = document.getElementById('stateselection');
+    // var activitysel = document.getElementsByClassName('activity');
+
+    // for (var i = 0; i < activitysel.length; i++) {
+    //   if (activitysel[i].checked) {
+    //     console.log(activitysel[i].value)
+    //   }
+    // }
 
     var stateCode = statesel.value;
+    console.log("stateCode: " + stateCode);
+    localStorage.setItem('lastState', stateCode);
+
+    localStorage.setItem('lastCoord', null);
+
+    displayParks(stateCode);
+  });
+
+  // Get response from API and write parks to cards in page
+  function displayParks(stateCode) {
+    $("#parkinfo").empty();
+    $('#map').empty();
     var queryURL = 'https://developer.nps.gov/api/v1/parks?stateCode=' + stateCode + '&api_key=' + apiKey;
 
     $.get({
@@ -106,6 +134,8 @@ $(document).ready(function () {
         var coordinates = new google.maps.LatLng(latitude, longitude);
         console.log("thisCoord: " + coordinates);
 
+        localStorage.setItem('lastCoord', JSON.stringify(coordinates));
+
         displayMap(coordinates);
       }
 
@@ -125,6 +155,17 @@ $(document).ready(function () {
     }).catch(function (error) {
       console.error(error);
     });
-  });
+  }
+
+  function displayLastMap(coordinates) {
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 6,
+      center: coordinates,
+    });
+    const marker = new google.maps.Marker({
+      position: coordinates,
+      map: map,
+    });
+  }
 
 });  // end of document ready function
