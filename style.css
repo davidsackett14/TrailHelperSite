@@ -13,7 +13,9 @@
   color:rgb(109, 104, 104)
 }
 
-
+h1 {
+  text-align: center;
+}
 .widthSize {
   width: 200%;
 }
